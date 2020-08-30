@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼색 카드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0 auto; padding:0;}
+        li{list-style: none;}
+        a{text-decoration: none; color:inherit; display:block;}
+        .cf:after{content:""; clear:both; display:block;}
+
+        .color{width:150px; display:flex; justify-content: space-around;}
+        .b{width:30px; height: 30px; background:rgb(16,12,9); border-radius: 50%; transition:0.6s; position:relative; left:-20%;}
+        #card:hover .b{transform:translateX(105%); opacity: 1;}
+        .w{width:30px; height: 30px; background:rgb(175, 134, 37); border-radius: 50%; transition:0.5s;position:relative; left:-20%;}
+        #card:hover .w{transform:translateX(105%); opacity: 1;}
+        .y{width:30px; height: 30px; background:rgb(194,181,172); border-radius: 50%; transition:0.4s;position:relative; left:-20%;}
+        #card:hover .y{transform:translateX(105%); opacity: 1;}
+        
+        body{
+            background:#333;
+            min-height: 100vh;
+            width:100vw;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #card{
+            width:500px;
+            height:675px;
+            position:relative;
+            background:#333;
+            border:8px #111 solid;
+            border-radius: 20px;
+            overflow: hidden;
+            display:flex;
+            justify-content: center;
+        }
+        .imgBox img{
+            position:absolute;
+            z-index:666;
+            opacity: 1;
+        }
+        .aaa{
+            left:0;
+            transition:0.5s;
+        }
+        #card:hover .aaa{
+            opacity: 0;
+        }
+        .bbb{
+            transition:0.5s;
+        }
+        #card .bbb{
+            z-index:999;
+            left:133px;
+            transition:0.5s;
+            opacity: 0;
+        }
+        #card:hover .bbb{
+            opacity: 1;
+            transform:scale(0.7) translate(-210px,-80px);
+        }
+        #card:hover{
+            background:#555;
+            color:#fff;
+
+        }
+        #card:after{
+            content:"SamsaeK";
+            position: absolute;
+            font-size: 4.5rem;
+            color:#222;
+            font-family: 'Pacifico', cursive;
+            transform: rotate(-15deg);
+            top:10%;
+            left:35%;
+            opacity: 0.5;
+        }
+        
+        .contentBox{
+            width:80%;
+            position: relative;
+            /* bottom:10%; */
+            top:30%;
+        }
+        #card h3{
+            position:absolute;
+            color:#fff;
+            font-family: 'Do Hyeon', sans-serif;
+            font-size: 3.5rem;
+            left:59%;
+            top:0%;
+            transition:0.3s;
+            opacity: 0;
+        }
+        #card:hover h3{
+            transform: translateY(65%);
+            opacity: 1;
+            /* top:5%; */
+        }
+        .birthday{
+            position:absolute;
+            color:#fff;
+            transition:0.4s;
+            opacity: 0;
+            left:50%;
+            top:8%;
+        }
+        #card:hover .birthday{
+            transform: translateY(330%);
+            opacity: 1;
+        }
+        .gen{
+            position:absolute;
+            top:13%;
+            left:50%;
+            transition:0.5s;
+            opacity: 0;
+        }
+        #card:hover .gen{
+            transform: translateY(335%);
+            opacity: 1;        
+        }
+        .fam{
+            position:absolute;
+            top:18%;
+            left:50%;
+            transition:0.6s;
+            opacity: 0;
+        }
+        #card:hover .fam{
+            transform: translateY(340%);
+            opacity: 1; 
+        }
+        .color{
+            position:absolute;
+            top:34%;
+            left:50%;
+
+        }
+        .idt{
+            position:absolute;
+            top:62%;
+            left:-7%;
+            border:2px #111 solid;
+            border-radius: 15px;
+            padding:3%;
+            transition:0.5s;
+            opacity: 0;
+        }
+        #card:hover .idt{
+            transform: translateY(-120%);
+            opacity: 1; 
+        }
+        /* .sta span{display:inline-block;}
+        .sta{
+            width:80%;
+            position:absolute;
+            top:65%;
+            left:10%;
+            display: flex;
+            justify-content: space-between;
+        } */
+
+    </style>
+</head>
+<body>
+    
+    <div id="card">
+        <div class="imgBox">
+            <img class="aaa" src="img/samb.jpg" alt="">
+            <img class="bbb" src="img/sam1.png" alt="">
+        </div>
+        <div class="contentBox">
+            <h3>삼색</h3>
+            
+            <div class="birthday">나이 : 3살 (추정)</div>
+            
+            <div class="gen">성별 : 암컷</div>
+            <div class="fam">
+                <span>가족 : </span>
+                <span>Marilyn,</span>
+                <span>도도</span>
+            </div>
+            <div class="color">
+                <!-- <span>색 : </span> -->
+                <div class="b"></div>
+                <div class="w"></div>
+                <div class="y"></div>
+            </div>
+            <div class="idt">
+                <p>
+                    haha ha 채널의 미모 담당이자 애교 담당.<br>눈가의 검정 아이라인과 코 옆의 점이 매력 포인트로,<br>과할 정도로 뽀송한 털을 보유하고 있다.<br>높고 가녀린 울음소리를 낸다.
+                </p>
+            </div>
+            <!-- <div class="sta">
+                <span>공격력 : 10000 </span>
+                <span>방어력 : 20</span>
+            </div> -->
+        </div>
+    </div>
+
+    <script>
+        // var card = document.querySelector("#card");
+        // var img = document.querySelector(".aaa");
+
+        // card.addEventListener('mouseover',cardon);
+        // card.addEventListener('mouseout',cardout);
+
+        // function cardon(e){
+        //     img.setAttribute('src',"img/sam1.png");
+        //     card.classList.add("on");
+        // }
+        // function cardout(e){
+        //     img.setAttribute('src',"img/samb.jpg");
+        //     card.classList.remove("on");
+        // }
+    </script>
+</body>
+</html>
